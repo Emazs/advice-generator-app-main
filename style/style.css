@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    /*Primary*/
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    /*Neutral*/
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+
+    /*fonts*/
+    --Manrope: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: var(--DarkBlue);
+    height: 90vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 540px; /*540*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 30px 30px 0 30px;
+    font-family: var(--Manrope);
+    background-color: var(--DarkGrayishBlue);
+}
+
+.advice {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--NeonGreen);
+}
+
+.deviceNumber {
+    letter-spacing: 1px;
+}
+
+.text {
+    padding: 20px;
+    font-size: 28px;
+    text-align: center;
+    color: var(--LightCyan);
+}
+
+.dice {
+    position: relative;
+    top: 33px;
+    display: grid;
+    place-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: var(--NeonGreen);
+}
+
+.dice:hover {
+    cursor: pointer;
+    filter: saturate(180%);
+    box-shadow: 0px 0px 51px 7px rgba(13, 255, 0, 1);
+    -moz-box-shadow: 0px 0px 51px 7px rgba(13, 255, 0, 1);
+    -webkit-box-shadow: 0px 0px 51px 7px rgba(13, 255, 0, 1);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.dividerMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 984px) {
+    .container {
+        width: 70%; /*540*/
+    }
+
+    .dividerMobile {
+        display: block;
+    }
+
+    .divider{
+        display: none;
+    }
+}
